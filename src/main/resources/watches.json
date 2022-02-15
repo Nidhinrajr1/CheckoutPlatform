@@ -1,0 +1,22 @@
+[{
+		"id": "001",
+		"name": "Rolex",
+		"price": 100
+	},
+	{
+		"id": "002",
+		"name": "Michael Kors",
+		"price": 80
+	},
+	{
+		"id": "003",
+		"name": "Swatch",
+		"price": 50
+	},
+	{
+		"id": "004",
+		"name": "Casio",
+		"price": 30
+	}
+
+]
