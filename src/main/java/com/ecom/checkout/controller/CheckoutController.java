@@ -27,33 +27,33 @@ public class CheckoutController {
 	 * Method to checkout watches. This method will return total checkout price of
 	 * list of selected watches
 	 * 
-	 * @param ids
-	 * 
-	 * @return
+	 * @param watchIds
+	 * @return Return map contain total price of watches.
 	 */
 	@PostMapping("/checkout")
-	public @ResponseBody Map<String, Integer> checkout(@RequestBody String[] ids) {
-		Map<String, Integer> priceMap = new HashMap<String, Integer>();
-		System.out.println("Input Watch ids================"+ Arrays.toString(ids));
+	public @ResponseBody Map<String, Integer> checkout(@RequestBody String[] watchIds) {
+		Map<String, Integer> responseMap = new HashMap<String, Integer>();
 		try {
 
-			LOGGER.debug("Input Watch ids", Arrays.toString(ids));
-			
-			/* if (ids != null && ids.length > 0) { */
-				Cart cart = new Cart();
-				cart.setItems(Arrays.asList(ids));
+			LOGGER.debug("Input Watch ids", Arrays.toString(watchIds));
 
-				priceMap = checkoutService.checkout(cart);
-			/*}
-			else {
-				LOGGER.error("EMPTY!!!!!!!!!!!!!!!!!!");
-			}*/
-				priceMap.put("price", 360);
-				
+			if (watchIds != null && watchIds.length > 0) {
+				Cart cart = new Cart();
+				cart.setItems(Arrays.asList(watchIds));
+
+				Double price = checkoutService.checkout(cart);
+				responseMap.put("price", price.intValue());
+
+			} else {
+				LOGGER.warn("Empty input watchIds");
+			}
+
+//			priceMap.put("price", 360);
+
 		} catch (Exception ex) {
 			LOGGER.error("Exception occured in checkout", ex);
 		}
-		return priceMap;
+		return responseMap;
 	}
 
 }

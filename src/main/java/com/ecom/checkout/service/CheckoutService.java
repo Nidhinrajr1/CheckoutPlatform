@@ -1,12 +1,16 @@
 package com.ecom.checkout.service;
 
-import java.util.Map;
-
 import com.ecom.checkout.model.Cart;
-
 
 public interface CheckoutService {
 
-	 Map<String,Integer> checkout(Cart cart);
+	/**
+	 * Method to perform checkout operation. Return final price after applying
+	 * offers.
+	 * 
+	 * @param cart
+	 * @return
+	 */
+	Double checkout(Cart cart);
 
 }
