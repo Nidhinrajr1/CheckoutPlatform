@@ -1,9 +1,18 @@
 package com.ecom.checkout.model;
 
-public class Watch {
+import java.io.Serializable;
 
+public class Watch implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	/** Unique watch id */
 	private String id;
+
+	/* Watch name */
 	private String name;
+
+	/* Watch price */
 	private Double price;
 
 	public String getId() {

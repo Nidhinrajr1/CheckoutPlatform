@@ -14,6 +14,9 @@ import com.ecom.checkout.util.FileUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
+ * Service for fetching watches available in json file 
+ * Note: For now using loading data from file. Data not stored in RDBMS.
+ * 
  * @author nidhi
  *
  */

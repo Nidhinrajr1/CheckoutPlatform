@@ -46,9 +46,8 @@ public class CheckoutController {
 
 			} else {
 				LOGGER.warn("Empty input watchIds");
+				responseMap.put("price", 0);
 			}
-
-//			priceMap.put("price", 360);
 
 		} catch (Exception ex) {
 			LOGGER.error("Exception occured in checkout", ex);
