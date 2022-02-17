@@ -7,11 +7,11 @@ Watch catalogue:
  Below is a catalogue of four watches and their associated prices:
 	_________________________________________________
 	|Watch ID | Watch Name   | Unit Price | Discount |
-	|001 	  | Rolex 		 | 100 		  |3 for 200 |
-	|002 	  | Michael Kors | 80 		  |2 for 120 |
-	|003 	  | Swatch 		 | 50         |          |
-	|004 	  | Casio 		 | 30         |          |
-    --------------------------------------------------
+	|001 	  | Rolex 	 | 100 	      |3 for 200 |
+	|002 	  | Michael Kors | 80 	      |2 for 120 |
+	|003 	  | Swatch 	 | 50         |          |
+	|004 	  | Casio 	  | 30        |          |
+    	--------------------------------------------------
 There are a few requirements worth noting here:
 	● The first two products have a possible discount. As an example, if the user attempts to
 	checkout three or six Rolex watches then they will receive the discount price once or twice,
